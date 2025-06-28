@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Tanmay Khedekar</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #141414;
+      color: #e5e5e5;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+    section {
+      flex-grow: 1;
+    }
+    .netflix-red {
+      background-color: #e50914;
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Project card hover effect */
+    .project-card {
+      background-color: #2d2d2d;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      cursor: default;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(229, 9, 20, 0.7);
+      background-color: #3a0d0d;
+    }
+
+    /* Project title style */
+    .project-title {
+      color: #f87171; /* Tailwind red-400 */
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    /* GitHub link style */
+    .github-link {
+      color: #f87171;
+      margin-top: 0.5rem;
+      display: inline-block;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+    .github-link:hover {
+      color: #e50914;
+    }
+
+    /* Paragraph styling */
+    p {
+      margin-top: 0.5rem;
+      line-height: 1.5;
+      color: #d1d5db; /* Tailwind gray-300 for contrast */
+    }
+  </style>
+</head>
+<body>
+  <nav class="flex items-center justify-between px-6 py-4 netflix-red text-white">
+    <h1 class="text-2xl font-bold">TanmayFlix</h1>
+    <ul class="flex space-x-6 text-lg">
+      <li><a href="index.html" class="hover:underline">Home</a></li>
+      <li><a href="about.html" class="hover:underline">About</a></li>
+      <li><a href="skills.html" class="hover:underline">Skills</a></li>
+      <li><a href="certifications.html" class="hover:underline">Certifications</a></li>
+      <li><a href="contact.html" class="hover:underline">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="max-w-5xl mx-auto p-8 fade-in">
+    <h2 class="text-4xl font-bold text-red-500 mb-6">Projects</h2>
+    <div class="space-y-6">
+      <div class="project-card">
+        <h3 class="project-title">Network Threat Detection</h3>
+        <p>Developed a deep learning model based on BERT architecture to detect DDoS attacks and other network anomalies by analyzing packet-level network traffic data.</p>
+        <p><strong>Technologies:</strong> Python, PyTorch, Transformers, Scikit-learn, Wireshark, Network Packet Analysis.</p>
+        <a href="https://github.com/TanmayKhedekar/Network_Threat_Detection" target="_blank" rel="noopener" class="github-link">GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">JARVIS Chatbot</h3>
+        <p>Built an AI-powered chatbot leveraging NLP and task automation. It integrates with Flask backend and uses TensorFlow and Hugging Face for natural language understanding and response generation.</p>
+        <p><strong>Technologies:</strong> Python, Flask, TensorFlow, Hugging Face Transformers, NLP, REST APIs.</p>
+        <a href="https://github.com/TanmayKhedekar/chatbot" target="_blank" rel="noopener" class="github-link">GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Tweetsniffer Web App</h3>
+        <p>MERN-stack web application for real-time analysis and sentiment tracking of tweets, using the Twitter API for live data streaming and visualization.</p>
+        <p><strong>Technologies:</strong> MongoDB, Express, React, Node.js, Twitter API, Chart.js, Socket.io.</p>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Krushaware</h3>
+        <p>Developed a weather-based advisory application for farmers providing localized crop insights, sowing schedules, and irrigation tips, using real-time weather APIs.</p>
+        <p><strong>Technologies:</strong> MongoDB, Express, React, Node.js, OpenWeatherMap API, RESTful APIs.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 text-sm netflix-red text-white">
+    © 2025 Tanmay Khedekar. All rights reserved.
+  </footer>
+</body>
+</html>
