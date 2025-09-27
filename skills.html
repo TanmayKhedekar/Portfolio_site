@@ -32,25 +32,24 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Skill card hover: scale up + shadow */
+    /* Card hover effect */
     .grid > div {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: default;
     }
-
     .grid > div:hover {
       transform: scale(1.05);
       box-shadow: 0 8px 16px rgba(229, 9, 20, 0.5);
     }
 
-    /* Skill titles hover: color change */
+    /* Titles hover */
     h3:hover {
-      color: #e50914; /* Netflix red */
+      color: #e50914;
       cursor: pointer;
       transition: color 0.3s ease;
     }
 
-    /* List items hover: underline text */
+    /* List hover */
     ul.list-disc li:hover {
       text-decoration: underline;
       color: #e50914;
@@ -60,22 +59,37 @@
   </style>
 </head>
 <body>
-  <nav class="flex items-center justify-between px-6 py-4 netflix-red text-white">
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 netflix-red text-white flex-wrap">
     <h1 class="text-2xl font-bold">TanmayFlix</h1>
-    <ul class="flex space-x-6 text-lg">
+    <ul class="hidden md:flex space-x-6 text-lg">
       <li><a href="index.html" class="hover:underline">Home</a></li>
       <li><a href="about.html" class="hover:underline">About</a></li>
       <li><a href="projects.html" class="hover:underline">Projects</a></li>
       <li><a href="certifications.html" class="hover:underline">Certifications</a></li>
       <li><a href="contact.html" class="hover:underline">Contact</a></li>
     </ul>
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button id="menu-toggle" class="focus:outline-none text-white text-2xl">☰</button>
+    </div>
   </nav>
 
-  <section class="max-w-5xl mx-auto p-8 fade-in">
-    <h2 class="text-4xl font-bold text-red-500 mb-6">Skills</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-lg">
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-black text-center py-4 space-y-4">
+    <a href="index.html" class="block">Home</a>
+    <a href="about.html" class="block">About</a>
+    <a href="projects.html" class="block">Projects</a>
+    <a href="certifications.html" class="block">Certifications</a>
+    <a href="contact.html" class="block">Contact</a>
+  </div>
+
+  <!-- Skills Section -->
+  <section class="max-w-6xl mx-auto p-6 md:p-8 fade-in">
+    <h2 class="text-3xl md:text-4xl font-bold text-red-500 mb-6 text-center md:text-left">Skills</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-base md:text-lg">
       <div>
-        <h3 class="text-xl font-semibold text-white">Languages</h3>
+        <h3 class="text-lg md:text-xl font-semibold text-white">Languages</h3>
         <ul class="list-disc ml-6 mt-2">
           <li>Java</li>
           <li>Python</li>
@@ -83,7 +97,7 @@
         </ul>
       </div>
       <div>
-        <h3 class="text-xl font-semibold text-white">Problem Solving</h3>
+        <h3 class="text-lg md:text-xl font-semibold text-white">Problem Solving</h3>
         <ul class="list-disc ml-6 mt-2">
           <li>Data Structures & Algorithms</li>
           <li>Competitive Programming (LeetCode, CodeChef)</li>
@@ -91,7 +105,7 @@
         </ul>
       </div>
       <div>
-        <h3 class="text-xl font-semibold text-white">Web Development</h3>
+        <h3 class="text-lg md:text-xl font-semibold text-white">Web Development</h3>
         <ul class="list-disc ml-6 mt-2">
           <li>HTML/CSS/JS</li>
           <li>React, Node.js, Express</li>
@@ -99,7 +113,7 @@
         </ul>
       </div>
       <div>
-        <h3 class="text-xl font-semibold text-white">Machine Learning & AI</h3>
+        <h3 class="text-lg md:text-xl font-semibold text-white">Machine Learning & AI</h3>
         <ul class="list-disc ml-6 mt-2">
           <li>LLMs, Transformers</li>
           <li>Hugging Face, PyTorch, TensorFlow</li>
@@ -107,7 +121,7 @@
         </ul>
       </div>
       <div>
-        <h3 class="text-xl font-semibold text-white">Data Analysis</h3>
+        <h3 class="text-lg md:text-xl font-semibold text-white">Data Analysis</h3>
         <ul class="list-disc ml-6 mt-2">
           <li>numpy, pandas, matplotlib</li>
           <li>PowerBI</li>
@@ -115,7 +129,7 @@
         </ul>
       </div>
       <div>
-        <h3 class="text-xl font-semibold text-white">Cloud & DevOps</h3>
+        <h3 class="text-lg md:text-xl font-semibold text-white">Cloud & DevOps</h3>
         <ul class="list-disc ml-6 mt-2">
           <li>AWS (EC2, S3, IAM)</li>
           <li>Docker</li>
@@ -125,8 +139,19 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="text-center py-4 text-sm netflix-red text-white">
     © 2025 Tanmay Khedekar. All rights reserved.
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
 </body>
 </html>
