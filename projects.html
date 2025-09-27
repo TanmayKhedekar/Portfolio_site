@@ -47,14 +47,14 @@
       background-color: #3a0d0d;
     }
 
-    /* Project title style */
+    /* Project title */
     .project-title {
       color: #f87171; /* Tailwind red-400 */
       font-weight: 700;
       font-size: 1.25rem;
     }
 
-    /* GitHub link style */
+    /* GitHub link */
     .github-link {
       color: #f87171;
       margin-top: 0.5rem;
@@ -66,29 +66,46 @@
       color: #e50914;
     }
 
-    /* Paragraph styling */
+    /* Paragraphs */
     p {
       margin-top: 0.5rem;
       line-height: 1.5;
-      color: #d1d5db; /* Tailwind gray-300 for contrast */
+      color: #d1d5db; /* Tailwind gray-300 */
     }
   </style>
 </head>
 <body>
-  <nav class="flex items-center justify-between px-6 py-4 netflix-red text-white">
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 netflix-red text-white flex-wrap">
     <h1 class="text-2xl font-bold">TanmayFlix</h1>
-    <ul class="flex space-x-6 text-lg">
+    <ul class="hidden md:flex space-x-6 text-lg">
       <li><a href="index.html" class="hover:underline">Home</a></li>
       <li><a href="about.html" class="hover:underline">About</a></li>
       <li><a href="skills.html" class="hover:underline">Skills</a></li>
       <li><a href="certifications.html" class="hover:underline">Certifications</a></li>
       <li><a href="contact.html" class="hover:underline">Contact</a></li>
     </ul>
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button id="menu-toggle" class="focus:outline-none text-white text-2xl">☰</button>
+    </div>
   </nav>
 
-  <section class="max-w-5xl mx-auto p-8 fade-in">
-    <h2 class="text-4xl font-bold text-red-500 mb-6">Projects</h2>
-    <div class="space-y-6">
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-black text-center py-4 space-y-4">
+    <a href="index.html" class="block">Home</a>
+    <a href="about.html" class="block">About</a>
+    <a href="skills.html" class="block">Skills</a>
+    <a href="certifications.html" class="block">Certifications</a>
+    <a href="contact.html" class="block">Contact</a>
+  </div>
+
+  <!-- Projects Section -->
+  <section class="max-w-6xl mx-auto p-6 md:p-8 fade-in">
+    <h2 class="text-3xl md:text-4xl font-bold text-red-500 mb-6 text-center md:text-left">Projects</h2>
+    
+    <!-- Grid layout for responsiveness -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
       <div class="project-card">
         <h3 class="project-title">Network Threat Detection</h3>
         <p>Developed a deep learning model based on BERT architecture to detect DDoS attacks and other network anomalies by analyzing packet-level network traffic data.</p>
@@ -117,8 +134,19 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="text-center py-4 text-sm netflix-red text-white">
     © 2025 Tanmay Khedekar. All rights reserved.
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
 </body>
 </html>
