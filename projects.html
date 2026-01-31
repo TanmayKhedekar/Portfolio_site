@@ -3,150 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Tanmay Khedekar</title>
+  <title>About | Tanmay Khedekar</title>
+
+  <!-- SEO -->
+  <meta name="description" content="About Tanmay Khedekar – AI Engineer focused on LLMs, Generative AI, and scalable ML systems." />
+
+  <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
     body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      background-color: #141414;
-      color: #e5e5e5;
-      font-family: 'Helvetica Neue', sans-serif;
-    }
-    section {
-      flex-grow: 1;
-    }
-    .netflix-red {
-      background-color: #e50914;
-    }
-    .fade-in {
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      background-color: #0b0b0b;
+      color: #e5e7eb;
+      font-family: 'Inter', sans-serif;
     }
 
-    /* Project card hover effect */
-    .project-card {
-      background-color: #2d2d2d;
-      padding: 1.5rem;
+    .accent { color: #ef4444; }
+
+    .card {
+      background: #111827;
       border-radius: 0.75rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-      cursor: default;
-    }
-    .project-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(229, 9, 20, 0.7);
-      background-color: #3a0d0d;
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* Project title */
-    .project-title {
-      color: #f87171; /* Tailwind red-400 */
-      font-weight: 700;
-      font-size: 1.25rem;
-    }
-
-    /* GitHub link */
-    .github-link {
-      color: #f87171;
-      margin-top: 0.5rem;
-      display: inline-block;
-      text-decoration: underline;
-      transition: color 0.3s ease;
-    }
-    .github-link:hover {
-      color: #e50914;
-    }
-
-    /* Paragraphs */
-    p {
-      margin-top: 0.5rem;
-      line-height: 1.5;
-      color: #d1d5db; /* Tailwind gray-300 */
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(239,68,68,0.25);
     }
   </style>
 </head>
 <body>
+
   <!-- Navbar -->
-  <nav class="flex items-center justify-between px-6 py-4 netflix-red text-white flex-wrap">
-    <h1 class="text-2xl font-bold">TanmayFlix</h1>
-    <ul class="hidden md:flex space-x-6 text-lg">
-      <li><a href="index.html" class="hover:underline">Home</a></li>
-      <li><a href="about.html" class="hover:underline">About</a></li>
-      <li><a href="skills.html" class="hover:underline">Skills</a></li>
-      <li><a href="certifications.html" class="hover:underline">Certifications</a></li>
-      <li><a href="contact.html" class="hover:underline">Contact</a></li>
+  <nav class="flex justify-between items-center px-8 py-5 bg-black bg-opacity-80">
+    <div class="text-xl font-bold">Tanmay Khedekar</div>
+    <ul class="hidden md:flex space-x-8 text-sm">
+      <li><a href="index.html" class="hover:text-red-400">Home</a></li>
+      <li><a href="projects.html" class="hover:text-red-400">Projects</a></li>
+      <li><a href="skills.html" class="hover:text-red-400">Skills</a></li>
+      <li><a href="certifications.html" class="hover:text-red-400">Certifications</a></li>
+      <li><a href="contact.html" class="hover:text-red-400">Contact</a></li>
     </ul>
-    <!-- Mobile Menu Button -->
-    <div class="md:hidden">
-      <button id="menu-toggle" class="focus:outline-none text-white text-2xl">☰</button>
-    </div>
   </nav>
 
-  <!-- Mobile Dropdown Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-black text-center py-4 space-y-4">
-    <a href="index.html" class="block">Home</a>
-    <a href="about.html" class="block">About</a>
-    <a href="skills.html" class="block">Skills</a>
-    <a href="certifications.html" class="block">Certifications</a>
-    <a href="contact.html" class="block">Contact</a>
-  </div>
+  <!-- About Section -->
+  <section class="max-w-5xl mx-auto px-6 py-16">
+    <h1 class="text-4xl font-bold mb-6">About Me</h1>
 
-  <!-- Projects Section -->
-  <section class="max-w-6xl mx-auto p-6 md:p-8 fade-in">
-    <h2 class="text-3xl md:text-4xl font-bold text-red-500 mb-6 text-center md:text-left">Projects</h2>
-    
-    <!-- Grid layout for responsiveness -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-      <div class="project-card">
-        <h3 class="project-title">Network Threat Detection</h3>
-        <p>Developed a deep learning model based on BERT architecture to detect DDoS attacks and other network anomalies by analyzing packet-level network traffic data.</p>
-        <p><strong>Technologies:</strong> Python, PyTorch, Transformers, Scikit-learn, Wireshark, Network Packet Analysis.</p>
-        <a href="https://github.com/TanmayKhedekar/Network_Threat_Detection" target="_blank" rel="noopener" class="github-link">GitHub</a>
-      </div>
+    <p class="text-lg leading-relaxed text-gray-300">
+      I am <strong class="accent">Tanmay Khedekar</strong>, a final-year Computer Science student specializing in
+      <strong>Artificial Intelligence, Machine Learning, and Generative AI</strong>. My primary focus is on building
+      <strong>production-ready AI systems</strong> involving Large Language Models, NLP pipelines, and intelligent automation.
+    </p>
 
-      <div class="project-card">
-        <h3 class="project-title">JARVIS Chatbot</h3>
-        <p>Built an AI-powered chatbot leveraging NLP and task automation. It integrates with Flask backend and uses TensorFlow and Hugging Face for natural language understanding and response generation.</p>
-        <p><strong>Technologies:</strong> Python, Flask, TensorFlow, Hugging Face Transformers, NLP, REST APIs.</p>
-        <a href="https://github.com/TanmayKhedekar/chatbot" target="_blank" rel="noopener" class="github-link">GitHub</a>
-      </div>
+    <p class="text-lg leading-relaxed text-gray-300 mt-4">
+      I have hands-on experience working with <strong>LLMs, Transformers, and deep learning models</strong>, covering the
+      entire lifecycle from data preprocessing and fine-tuning to evaluation and deployment. I aim to design AI systems
+      that are not only accurate but also scalable, interpretable, and real-world ready.
+    </p>
 
-      <div class="project-card">
-        <h3 class="project-title">Tweetsniffer Web App</h3>
-        <p>MERN-stack web application for real-time analysis and sentiment tracking of tweets, using the Twitter API for live data streaming and visualization.</p>
-        <p><strong>Technologies:</strong> MongoDB, Express, React, Node.js, Twitter API, Chart.js, Socket.io.</p>
-      </div>
+    <!-- What I Do -->
+    <div class="mt-10 card">
+      <h2 class="text-2xl font-semibold mb-4">What I Do</h2>
+      <ul class="list-disc pl-6 space-y-2 text-gray-300">
+        <li>Design and fine-tune Large Language Models for real-world applications</li>
+        <li>Build AI-driven security and network threat detection systems</li>
+        <li>Develop end-to-end ML pipelines using PyTorch and Hugging Face</li>
+        <li>Create full-stack applications with AI-first architecture</li>
+        <li>Deploy and monitor ML models in production environments</li>
+      </ul>
+    </div>
 
-      <div class="project-card">
-        <h3 class="project-title">Krushaware</h3>
-        <p>Developed a weather-based advisory application for farmers providing localized crop insights, sowing schedules, and irrigation tips, using real-time weather APIs.</p>
-        <p><strong>Technologies:</strong> MongoDB, Express, React, Node.js, OpenWeatherMap API, RESTful APIs.</p>
-      </div>
+    <!-- Experience -->
+    <div class="mt-10 card">
+      <h2 class="text-2xl font-semibold mb-2">Industry Experience</h2>
+      <p class="text-sm text-gray-400 mb-4">Proact AI Consulting · AI/ML Intern</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-300">
+        <li>Worked on fine-tuning and evaluating custom LLMs using PyTorch and Hugging Face</li>
+        <li>Developed NLP pipelines for text classification and chatbot systems</li>
+        <li>Integrated LangChain workflows for multi-step reasoning tasks</li>
+        <li>Contributed to deploying AI solutions for real business use cases</li>
+      </ul>
+    </div>
+
+    <!-- Beyond Tech -->
+    <div class="mt-10 card">
+      <h2 class="text-2xl font-semibold mb-4">Beyond Tech</h2>
+      <p class="text-gray-300">
+        Outside of technology, I am a <strong>district-level chess champion</strong>, which has strengthened my analytical
+        thinking and decision-making skills. I am also a trained <strong>harmonium player</strong>, balancing logic with
+        creativity—an approach I bring into my engineering work.
+      </p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-4 text-sm netflix-red text-white">
+  <footer class="text-center py-6 text-sm text-gray-400">
     © 2025 Tanmay Khedekar. All rights reserved.
   </footer>
 
-  <script>
-    // Mobile menu toggle
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuToggle.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-  </script>
 </body>
 </html>
