@@ -4,108 +4,107 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Tanmay Khedekar</title>
+
+  <!-- SEO -->
+  <meta name="description" content="About Tanmay Khedekar – AI Engineer focused on LLMs, Generative AI, and scalable ML systems." />
+
+  <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      background-color: #141414;
-      color: #e5e5e5;
-      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #0b0b0b;
+      color: #e5e7eb;
+      font-family: 'Inter', sans-serif;
     }
-    .netflix-red {
-      background-color: #e50914;
-    }
-    .fade-in {
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+
+    .accent { color: #ef4444; }
+
     .card {
+      background: #111827;
+      border-radius: 0.75rem;
+      padding: 2rem;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 15px rgba(255, 50, 50, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(239,68,68,0.25);
     }
   </style>
 </head>
 <body>
+
   <!-- Navbar -->
-  <nav class="flex flex-wrap items-center justify-between px-6 py-4 netflix-red text-white">
-    <h1 class="text-2xl font-bold">TanmayFlix</h1>
-    <button class="md:hidden text-white focus:outline-none" id="menu-btn">☰</button>
-    <ul id="menu" class="hidden md:flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 text-lg w-full md:w-auto">
-      <li><a href="index.html" class="block py-1 hover:underline">Home</a></li>
-      <li><a href="skills.html" class="block py-1 hover:underline">Skills</a></li>
-      <li><a href="projects.html" class="block py-1 hover:underline">Projects</a></li>
-      <li><a href="certifications.html" class="block py-1 hover:underline">Certifications</a></li>
-      <li><a href="contact.html" class="block py-1 hover:underline">Contact</a></li>
+  <nav class="flex justify-between items-center px-8 py-5 bg-black bg-opacity-80">
+    <div class="text-xl font-bold">Tanmay Khedekar</div>
+    <ul class="hidden md:flex space-x-8 text-sm">
+      <li><a href="index.html" class="hover:text-red-400">Home</a></li>
+      <li><a href="projects.html" class="hover:text-red-400">Projects</a></li>
+      <li><a href="skills.html" class="hover:text-red-400">Skills</a></li>
+      <li><a href="certifications.html" class="hover:text-red-400">Certifications</a></li>
+      <li><a href="contact.html" class="hover:text-red-400">Contact</a></li>
     </ul>
   </nav>
 
   <!-- About Section -->
-  <section class="max-w-4xl mx-auto p-6 sm:p-8 fade-in">
-    <h2 class="text-3xl sm:text-4xl font-bold text-red-500 mb-4">About Me</h2>
-    <p class="text-base sm:text-lg leading-relaxed">
-      I'm <strong>Tanmay Khedekar</strong>, a third-year B.Tech student majoring in Artificial Intelligence and Edge Computing at MIT School of Computing. Passionate about cutting-edge technologies, I specialize in developing intelligent solutions using Machine Learning, Natural Language Processing, and Full Stack Web Development and Aspiring Data Scientist.
-    </p>
-    <p class="mt-4 text-base sm:text-lg leading-relaxed">
-      I have interned at <strong>Proact AI Consulting</strong> where I worked with LLMs, LangChain, and advanced NLP tasks including tokenization, fine-tuning, and deployment of custom models. I'm also proficient in building smart web apps and tools that solve real-world problems.
-    </p>
-    <p class="mt-4 text-base sm:text-lg leading-relaxed">
-      Outside of tech, I'm a district-level chess champion and harmonium enthusiast. I love blending logic with creativity in everything I do.
-    </p>
-  </section>
+  <section class="max-w-5xl mx-auto px-6 py-16">
+    <h1 class="text-4xl font-bold mb-6">About Me</h1>
 
-  <!-- Experience Section -->
-  <section class="max-w-4xl mx-auto p-6 sm:p-8 fade-in">
-    <h2 class="text-3xl sm:text-4xl font-bold text-red-500 mb-6">Experience</h2>
-    <div class="bg-gray-800 p-6 rounded-lg card">
-      <h3 class="text-xl sm:text-2xl font-semibold text-red-400">Proact AI Consulting</h3>
-      <p class="text-sm sm:text-md mt-2 italic text-gray-300">Intern — Dec 2024 to Mar 2025</p>
-      <ul class="list-disc pl-5 sm:pl-6 mt-3 space-y-2 text-base sm:text-lg">
-        <li>Worked on custom LLMs with PyTorch and Hugging Face Transformers</li>
-        <li>Handled data preprocessing, tokenization, fine-tuning, and evaluation</li>
-        <li>Built NLP applications for text classification and chatbot systems</li>
-        <li>Integrated LangChain pipelines for multi-step contextual workflows</li>
-        <li>Contributed to the deployment of real-world AI solutions</li>
+    <p class="text-lg leading-relaxed text-gray-300">
+      I am <strong class="accent">Tanmay Khedekar</strong>, a final-year Computer Science student specializing in
+      <strong>Artificial Intelligence, Machine Learning, and Generative AI</strong>. My primary focus is on building
+      <strong>production-ready AI systems</strong> involving Large Language Models, NLP pipelines, and intelligent automation.
+    </p>
+
+    <p class="text-lg leading-relaxed text-gray-300 mt-4">
+      I have hands-on experience working with <strong>LLMs, Transformers, and deep learning models</strong>, covering the
+      entire lifecycle from data preprocessing and fine-tuning to evaluation and deployment. I aim to design AI systems
+      that are not only accurate but also scalable, interpretable, and real-world ready.
+    </p>
+
+    <!-- What I Do -->
+    <div class="mt-10 card">
+      <h2 class="text-2xl font-semibold mb-4">What I Do</h2>
+      <ul class="list-disc pl-6 space-y-2 text-gray-300">
+        <li>Design and fine-tune Large Language Models for real-world applications</li>
+        <li>Build AI-driven security and network threat detection systems</li>
+        <li>Develop end-to-end ML pipelines using PyTorch and Hugging Face</li>
+        <li>Create full-stack applications with AI-first architecture</li>
+        <li>Deploy and monitor ML models in production environments</li>
       </ul>
     </div>
-  </section>
 
-  <!-- Education Section -->
-  <section class="max-w-4xl mx-auto p-6 sm:p-8 fade-in">
-    <h2 class="text-3xl sm:text-4xl font-bold text-red-500 mb-6">Education</h2>
-    <div class="bg-gray-800 p-6 rounded-lg card">
-      <h3 class="text-xl sm:text-2xl font-semibold text-red-400">MIT School of Computing</h3>
-      <p class="text-sm sm:text-md mt-2 italic text-gray-300">B.Tech in AI & Edge Computing (2022 - 2026)</p>
-      <p class="text-base sm:text-lg mt-1">CGPA: <strong>8.6 / 10</strong></p>
+    <!-- Experience -->
+    <div class="mt-10 card">
+      <h2 class="text-2xl font-semibold mb-2">Industry Experience</h2>
+      <p class="text-sm text-gray-400 mb-4">Proact AI Consulting · AI/ML Intern</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-300">
+        <li>Worked on fine-tuning and evaluating custom LLMs using PyTorch and Hugging Face</li>
+        <li>Developed NLP pipelines for text classification and chatbot systems</li>
+        <li>Integrated LangChain workflows for multi-step reasoning tasks</li>
+        <li>Contributed to deploying AI solutions for real business use cases</li>
+      </ul>
+    </div>
 
-      <div class="mt-6">
-        <h4 class="text-lg sm:text-xl font-semibold text-white">HSC (12th) – Arihant college camp, Pune</h4>
-        <p class="text-base sm:text-lg mt-1">Percentage: <strong>60%</strong></p>
-      </div>
-
-      <div class="mt-6">
-        <h4 class="text-lg sm:text-xl font-semibold text-white">SSC (10th) – ST. Joseph English Medium School Khalad, Pune</h4>
-        <p class="text-base sm:text-lg mt-1">Percentage: <strong>77%</strong></p>
-      </div>
+    <!-- Beyond Tech -->
+    <div class="mt-10 card">
+      <h2 class="text-2xl font-semibold mb-4">Beyond Tech</h2>
+      <p class="text-gray-300">
+        Outside of technology, I am a <strong>district-level chess champion</strong>, which has strengthened my analytical
+        thinking and decision-making skills. I am also a trained <strong>harmonium player</strong>, balancing logic with
+        creativity—an approach I bring into my engineering work.
+      </p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-4 text-sm netflix-red text-white">
+  <footer class="text-center py-6 text-sm text-gray-400">
     © 2025 Tanmay Khedekar. All rights reserved.
   </footer>
 
-  <!-- Mobile Navbar Toggle -->
-  <script>
-    const menuBtn = document.getElementById("menu-btn");
-    const menu = document.getElementById("menu");
-    menuBtn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
-  </script>
 </body>
 </html>
