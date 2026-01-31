@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tanmay Khedekar | AI Engineer & Full Stack Specialist</title>
+  <title>Tanmay Khedekar | AI Engineer & LLM Specialist</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,23 +28,18 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .nav-link {
-      position: relative;
-      transition: color 0.3s;
-    }
-    .nav-link:hover { color: var(--g-blue); }
-    
     .bento-card {
       background: #f8f9fa;
       border: 1px solid #e0e0e0;
-      border-radius: 24px;
+      border-radius: 32px;
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
     }
     .bento-card:hover {
       background: #ffffff;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.06);
       border-color: var(--g-blue);
-      transform: translateY(-2px);
+      transform: translateY(-4px);
     }
     .skill-tag {
       background: #fff;
@@ -54,16 +49,16 @@
       font-size: 0.85rem;
       font-weight: 500;
     }
-    .badge-google {
-      background: linear-gradient(135deg, #4285F4 0%, #34A853 100%);
-      color: white;
+    .achievement-card {
+      border-left: 4px solid var(--g-blue);
+      background: linear-gradient(to right, #f0f7ff, #ffffff);
     }
   </style>
 </head>
 <body class="selection:bg-blue-100 selection:text-blue-700">
 
 <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-  <div class="max-w-6xl mx-auto px-6 h-18 flex items-center justify-between py-4">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
     <div class="flex items-center gap-2">
         <div class="grid grid-cols-2 gap-1 w-5">
             <div class="h-2 w-2 rounded-full bg-[var(--g-blue)]"></div>
@@ -74,167 +69,315 @@
         <span class="font-bold text-xl tracking-tight">Tanmay <span class="text-gray-400 font-light">Khedekar</span></span>
     </div>
     <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-      <a href="#experience" class="nav-link">Experience</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#skills" class="nav-link">Expertise</a>
+      <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+      <a href="#achievements" class="hover:text-blue-600 transition">Achievements</a>
+      <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
       <a href="https://linkedin.com/in/tanmay-khedekar-b66b43226/" target="_blank" class="text-blue-600 font-bold">LinkedIn →</a>
     </div>
   </div>
 </nav>
 
-<section class="pt-40 pb-20 px-6">
-  <div class="max-w-5xl mx-auto">
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-medium mb-8">
-      <span class="flex h-2 w-2 rounded-full bg-blue-600"></span>
-      Google GenAI Exchange Hackathon Winner 2025
+<section class="pt-44 pb-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-bold mb-8">
+      <span class="relative flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-600"></span>
+      </span>
+      Google GenAI Hackathon Winner 2025
     </div>
-    <h1 class="text-6xl md:text-8xl font-bold tracking-tight mb-8 leading-[1.1]">
-      Building the future with <br/>
+    <h1 class="text-6xl md:text-8xl font-bold tracking-tight mb-8 leading-[1.05]">
+      Crafting Intelligence with <br/>
       <span class="google-gradient-text">Generative AI.</span>
     </h1>
     <p class="text-xl md:text-2xl text-gray-500 max-w-3xl leading-relaxed mb-12">
-      AI Engineer specializing in <span class="text-black font-medium">LLM fine-tuning</span> and <span class="text-black font-medium">high-scale backend systems</span>. I bridge the gap between complex ML research and production-ready software.
+        AI Engineer & Final-year CS student. I specialize in <span class="text-black font-semibold">LLM fine-tuning</span> and <span class="text-black font-semibold">high-scale backend ML systems</span>, turning complex research into production-grade reality.
     </p>
     <div class="flex flex-wrap gap-4">
-      <a href="mailto:khedekartanmay2004@gmail.com" class="bg-[#1a73e8] text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-md shadow-blue-200">Start a Conversation</a>
-      <a href="#projects" class="bg-white border border-gray-300 text-gray-700 px-8 py-4 rounded-full font-bold hover:bg-gray-50 transition-all">View Projects</a>
+      <a href="mailto:khedekartanmay2004@gmail.com" class="bg-[#1a73e8] text-white px-10 py-5 rounded-full font-bold hover:bg-blue-700 transition shadow-xl shadow-blue-200">Get in Touch</a>
+      <a href="#projects" class="bg-white border border-gray-300 text-gray-700 px-10 py-5 rounded-full font-bold hover:bg-gray-50 transition">View My Work</a>
     </div>
   </div>
 </section>
 
-<section id="skills" class="max-w-6xl mx-auto px-6 py-24">
-    <div class="mb-16">
-        <h2 class="text-3xl font-bold mb-4">Core Expertise</h2>
-        <p class="text-gray-500">I am an AI-First engineer with deep roots in Software Engineering & Cloud Infrastructure.</p>
+<section class="max-w-7xl mx-auto px-6 mb-32">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="p-10 bento-card text-center">
+            <div class="text-5xl font-extrabold text-blue-600">40%</div>
+            <div class="text-xs text-gray-400 uppercase mt-3 font-bold tracking-widest">Compute Saved (LoRA)</div>
+        </div>
+        <div class="p-10 bento-card text-center">
+            <div class="text-5xl font-extrabold text-green-600">94%</div>
+            <div class="text-xs text-gray-400 uppercase mt-3 font-bold tracking-widest">Model Accuracy</div>
+        </div>
+        <div class="p-10 bento-card text-center">
+            <div class="text-5xl font-extrabold text-red-600">200+</div>
+            <div class="text-xs text-gray-400 uppercase mt-3 font-bold tracking-widest">Active SaaS Users</div>
+        </div>
+        <div class="p-10 bento-card text-center">
+            <div class="text-5xl font-extrabold text-yellow-600">10K+</div>
+            <div class="text-xs text-gray-400 uppercase mt-3 font-bold tracking-widest">Records Processed</div>
+        </div>
     </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-        <div class="md:col-span-8 bento-card p-10 border-blue-100 bg-blue-50/30">
-            <div class="text-blue-600 font-bold uppercase tracking-widest text-xs mb-4">Primary Focus</div>
-            <h3 class="text-3xl font-bold mb-6 italic">AI & Data Science</h3>
-            <div class="flex flex-wrap gap-3">
-                <span class="skill-tag border-blue-200">LLM Fine-tuning (LoRA/QLoRA)</span>
-                <span class="skill-tag border-blue-200">RAG Pipelines</span>
-                <span class="skill-tag border-blue-200">LangChain / LlamaIndex</span>
-                <span class="skill-tag border-blue-200">PyTorch & TensorFlow</span>
-                <span class="skill-tag border-blue-200">Prompt Engineering</span>
-                <span class="skill-tag border-blue-200">Computer Vision</span>
-                <span class="skill-tag border-blue-200">Vector DBs (Pinecone/Milvus)</span>
-            </div>
+</section>
+
+<section id="projects" class="py-32 bg-gray-50/50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-20">
+            <h2 class="text-4xl font-bold mb-4">Detailed Case Studies</h2>
+            <p class="text-gray-500 text-lg">Four flagship projects demonstrating full-cycle AI deployment.</p>
         </div>
 
-        <div class="md:col-span-4 bento-card p-10">
-            <div class="text-red-500 font-bold uppercase tracking-widest text-xs mb-4">Software Engineering</div>
-            <h3 class="text-2xl font-bold mb-6">Backend & Architecture</h3>
+        <div class="grid grid-cols-1 gap-12">
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center bento-card p-8 md:p-12 bg-white">
+                <div>
+                    <div class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-bold uppercase tracking-widest mb-6">Flagship Winner</div>
+                    <h3 class="text-4xl font-bold mb-6 italic">Artify AI Marketplace Assistant</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        A GenAI-powered SaaS platform designed for artisans to bridge the digital gap. It automates high-quality product storytelling, narrative generation, and catalog creation.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-gray-700">
+                            <span class="text-green-500 font-bold">✓</span> Integrated <strong>Gemini LLMs via Vertex AI</strong> for high-context content generation.
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-700">
+                            <span class="text-green-500 font-bold">✓</span> Scaled to <strong>200+ users</strong> and processed <strong>10,000+</strong> records.
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-700">
+                            <span class="text-green-500 font-bold">✓</span> <strong>Result:</strong> Improved user engagement by 25% for local artisans.
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">GCP</span> <span class="skill-tag">Firebase</span> <span class="skill-tag">Gemini LLMs</span> <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+                <div class="rounded-3xl overflow-hidden bg-gray-100 p-4">
+                    
+                    <p class="text-center text-[10px] text-gray-400 mt-2 uppercase font-bold">Project Workflow: RAG + Gemini Integration</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center bento-card p-8 md:p-12 bg-white">
+                <div class="order-2 md:order-1 rounded-3xl overflow-hidden bg-gray-100 p-4">
+                    
+                    <p class="text-center text-[10px] text-gray-400 mt-2 uppercase font-bold">Optimization Strategy: LoRA-based Transformer Training</p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <div class="inline-block px-3 py-1 rounded-full bg-red-100 text-red-700 text-[10px] font-bold uppercase tracking-widest mb-6">AI Engineering / Research</div>
+                    <h3 class="text-4xl font-bold mb-6 italic">Transformer-Based Intrusion Detection</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        Built during my tenure at Proact AI Consulting, this system uses Deep Learning to identify anomalous network traffic and DDoS attacks in real-time.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-gray-700">
+                            <span class="text-red-500 font-bold">✓</span> Applied <strong>LoRA (Low-Rank Adaptation)</strong> to fine-tune transformers, cutting compute costs by <strong>40%</strong>.
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-700">
+                            <span class="text-red-500 font-bold">✓</span> Processed <strong>50,000+ packets</strong> for supervised training with 94% accuracy.
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-700">
+                            <span class="text-red-500 font-bold">✓</span> Achieved <strong>sub-500ms latency</strong> for real-time threat inference.
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">PyTorch</span> <span class="skill-tag">Transformers</span> <span class="skill-tag">LoRA</span> <span class="skill-tag">Flask</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center bento-card p-8 md:p-12 bg-white">
+                <div>
+                    <div class="inline-block px-3 py-1 rounded-full bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-widest mb-6">Enterprise Data</div>
+                    <h3 class="text-4xl font-bold mb-6 italic">Queriums: Natural Language to SQL</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        A sophisticated engine enabling non-technical users to query relational databases using plain English, bridging the gap between business and data.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span> Implemented <strong>schema-aware prompting</strong> to reduce hallucinations significantly.
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span> Handled <strong>100,000+ rows</strong> with a 40% improvement in query accuracy over baseline models.
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span> Integrated query validation layers to ensure safe SQL execution.
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">LangChain</span> <span class="skill-tag">SQL</span> <span class="skill-tag">Prompt Engineering</span> <span class="skill-tag">Streamlit</span>
+                    </div>
+                </div>
+                <div class="rounded-3xl overflow-hidden bg-gray-100 p-8 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">💬 ➔ 📊</div>
+                        <div class="text-gray-400 font-bold text-sm">Natural Language to Query Engine</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center bento-card p-8 md:p-12 bg-white">
+                <div class="rounded-3xl overflow-hidden bg-slate-900 h-64 flex items-center justify-center">
+                    <div class="text-blue-400 animate-pulse text-4xl font-bold tracking-widest">A C T I V E</div>
+                </div>
+                <div>
+                    <div class="inline-block px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-[10px] font-bold uppercase tracking-widest mb-6">Automation</div>
+                    <h3 class="text-4xl font-bold mb-6 italic">JARVIS: AI Desktop Assistant</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        An advanced voice-activated assistant that automates desktop workflows and provides intelligent responses using the OpenAI API.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-gray-700">
+                            <span class="text-yellow-600 font-bold">✓</span> Integrated <strong>Speech Recognition</strong> for hands-free system navigation.
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-700">
+                            <span class="text-yellow-600 font-bold">✓</span> Automated routine tasks like email management, application launching, and web searching.
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-700">
+                            <span class="text-yellow-600 font-bold">✓</span> Utilized OpenAI’s GPT models for context-aware conversational logic.
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Python</span> <span class="skill-tag">OpenAI API</span> <span class="skill-tag">Speech Recognition</span> <span class="skill-tag">OS Automation</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="achievements" class="max-w-7xl mx-auto px-6 py-32">
+    <div class="flex flex-col md:flex-row gap-16">
+        <div class="md:w-1/3">
+            <h2 class="text-4xl font-bold mb-6">Achievements & <br/> Recognition</h2>
+            <p class="text-gray-500 text-lg">Proof of excellence in global hackathons and continuous learning.</p>
+        </div>
+        <div class="md:w-2/3 grid gap-6">
+            <div class="achievement-card p-8 rounded-3xl bento-card">
+                <div class="flex items-center gap-6">
+                    <span class="text-4xl">🏆</span>
+                    <div>
+                        <h4 class="text-xl font-bold">Google GenAI Exchange Hackathon Winner 2025</h4>
+                        <p class="text-gray-500">Won first place among top-tier competitors by developing Artify AI on Google Cloud Platform.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="achievement-card p-8 rounded-3xl bento-card" style="border-color: var(--g-green);">
+                <div class="flex items-center gap-6">
+                    <span class="text-4xl">🚀</span>
+                    <div>
+                        <h4 class="text-xl font-bold">Smart India Hackathon (SIH) Internal Winner</h4>
+                        <p class="text-gray-500">Led the team to victory in internal rounds of India's largest government hackathon.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="achievement-card p-8 rounded-3xl bento-card" style="border-color: var(--g-yellow);">
+                <div class="flex items-center gap-6">
+                    <span class="text-4xl">🤗</span>
+                    <div>
+                        <h4 class="text-xl font-bold">Hugging Face Model Contributor</h4>
+                        <p class="text-gray-500">Actively contributing to the open-source AI community with fine-tuned transformer models.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-8 rounded-3xl bento-card bg-gray-50">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6">Professional Certifications</h4>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="text-sm text-gray-700 flex items-center gap-2">📜 Train & Fine-Tune LLMs for Production</div>
+                    <div class="text-sm text-gray-700 flex items-center gap-2">📜 ML Using Python (SWAYAM/MHRD)</div>
+                    <div class="text-sm text-gray-700 flex items-center gap-2">📜 NPTEL Computer Vision (Govt. of India)</div>
+                    <div class="text-sm text-gray-700 flex items-center gap-2">📜 AWS Academy Cloud Foundations</div>
+                    <div class="text-sm text-gray-700 flex items-center gap-2">📜 IBM Frontend Development</div>
+                    <div class="text-sm text-gray-700 flex items-center gap-2">📜 Data Analysis (Databricks)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="max-w-7xl mx-auto px-6 py-32">
+    <h2 class="text-4xl font-bold mb-16 text-center">Technical Arsenal</h2>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div class="md:col-span-8 bento-card p-12 bg-blue-50/20 border-blue-100">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="h-10 w-10 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-bold">AI</div>
+                <h3 class="text-3xl font-bold">Artificial Intelligence & ML</h3>
+            </div>
+            <div class="flex flex-wrap gap-3">
+                <span class="skill-tag border-blue-200 text-blue-800">LLM Fine-Tuning (LoRA/QLoRA)</span>
+                <span class="skill-tag border-blue-200 text-blue-800">RAG Architectures</span>
+                <span class="skill-tag border-blue-200 text-blue-800">Transformers (Hugging Face)</span>
+                <span class="skill-tag border-blue-200 text-blue-800">PyTorch & TensorFlow</span>
+                <span class="skill-tag border-blue-200 text-blue-800">LangChain / LlamaIndex</span>
+                <span class="skill-tag border-blue-200 text-blue-800">Computer Vision (OpenCV)</span>
+                <span class="skill-tag border-blue-200 text-blue-800">Prompt Engineering</span>
+                <span class="skill-tag border-blue-200 text-blue-800">Model Evaluation & MLOps</span>
+            </div>
+        </div>
+        <div class="md:col-span-4 bento-card p-12">
+            <h3 class="text-2xl font-bold mb-8 italic">Languages</h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="skill-tag">Python (Expert)</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">JavaScript</span>
+            </div>
+        </div>
+        <div class="md:col-span-4 bento-card p-12">
+            <h3 class="text-2xl font-bold mb-8">Backend & SDE</h3>
             <div class="flex flex-wrap gap-3">
                 <span class="skill-tag">FastAPI</span>
                 <span class="skill-tag">Django</span>
-                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">REST APIs</span>
                 <span class="skill-tag">Microservices</span>
-                <span class="skill-tag">Java/C++</span>
+                <span class="skill-tag">MERN Stack</span>
             </div>
         </div>
-
-        <div class="md:col-span-5 bento-card p-10">
-            <div class="text-green-600 font-bold uppercase tracking-widest text-xs mb-4">Cloud & DevOps</div>
-            <h3 class="text-2xl font-bold mb-6">Scalable Infra</h3>
+        <div class="md:col-span-4 bento-card p-12 bg-green-50/20 border-green-100">
+            <h3 class="text-2xl font-bold mb-8">Cloud & Infra</h3>
             <div class="flex flex-wrap gap-3">
-                <span class="skill-tag">Google Cloud (GCP)</span>
-                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">GCP (Vertex AI)</span>
+                <span class="skill-tag">AWS (EC2/S3/IAM)</span>
                 <span class="skill-tag">Docker</span>
-                <span class="skill-tag">Kubernetes</span>
-                <span class="skill-tag">CI/CD Pipelines</span>
+                <span class="skill-tag">CI/CD</span>
+                <span class="skill-tag">Git / GitHub</span>
             </div>
         </div>
-
-        <div class="md:col-span-7 bento-card p-10 bg-yellow-50/20 border-yellow-100">
-            <div class="text-yellow-600 font-bold uppercase tracking-widest text-xs mb-4">Impact Metrics</div>
-            <div class="grid grid-cols-2 gap-8">
-                <div>
-                    <div class="text-4xl font-bold">40%</div>
-                    <div class="text-sm text-gray-500 mt-1">Reduction in inference cost via LoRA</div>
-                </div>
-                <div>
-                    <div class="text-4xl font-bold">10K+</div>
-                    <div class="text-sm text-gray-500 mt-1">Records processed in production</div>
-                </div>
+        <div class="md:col-span-4 bento-card p-12">
+            <h3 class="text-2xl font-bold mb-8">Data & Analytics</h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">NumPy & Pandas</span>
+                <span class="skill-tag">Matplotlib</span>
+                <span class="skill-tag">PowerBI</span>
+                <span class="skill-tag">Firebase</span>
             </div>
         </div>
     </div>
 </section>
 
-<section id="projects" class="bg-[#f8f9fa] py-24">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl font-bold mb-16 text-center">Featured Work</h2>
-    <div class="grid md:grid-cols-2 gap-10">
-        
-      <div class="group cursor-pointer">
-        <div class="overflow-hidden rounded-[32px] bg-white border border-gray-200 p-2 mb-6 transition-all group-hover:shadow-xl group-hover:border-blue-200">
-           <div class="bg-gradient-to-br from-blue-500 to-green-400 h-64 rounded-[28px] flex items-center justify-center text-white text-5xl font-bold">
-             Artify AI
-           </div>
-        </div>
-        <div class="px-4">
-            <div class="flex items-center gap-3 mb-3">
-                <span class="badge-google text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Winner</span>
-                <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">GenAI SaaS</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-3">Artify AI Platform</h3>
-            <p class="text-gray-600 leading-relaxed mb-4">Automating high-quality product storytelling and cataloging for artisans using Vertex AI. Winner of Google GenAI Exchange 2025.</p>
-        </div>
-      </div>
-
-      <div class="group cursor-pointer">
-        <div class="overflow-hidden rounded-[32px] bg-white border border-gray-200 p-2 mb-6 transition-all group-hover:shadow-xl group-hover:border-red-200">
-           <div class="bg-gradient-to-br from-gray-800 to-gray-900 h-64 rounded-[28px] flex items-center justify-center text-white text-5xl font-bold">
-             Queriums
-           </div>
-        </div>
-        <div class="px-4">
-            <div class="flex items-center gap-3 mb-3">
-                <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">Natural Language</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-3">Queriums: NL-to-SQL Engine</h3>
-            <p class="text-gray-600 leading-relaxed mb-4">Enterprise-grade system allowing non-technical users to query massive databases using plain English. 94% accuracy rate.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="experience" class="max-w-4xl mx-auto px-6 py-24">
-    <h2 class="text-3xl font-bold mb-16">The Journey</h2>
-    <div class="space-y-16">
-        <div class="flex flex-col md:flex-row gap-8">
-            <div class="w-32 text-gray-400 font-medium shrink-0">2025 - PRES</div>
-            <div>
-                <h3 class="text-xl font-bold italic">Software Engineering Intern (AI)</h3>
-                <div class="text-blue-600 font-medium mb-4">SabApplier</div>
-                <p class="text-gray-600">Architecting FastAPI & Django backends for AI services. Focusing on high-concurrency ingestion and robust authentication layers.</p>
-            </div>
-        </div>
-        <div class="flex flex-col md:flex-row gap-8">
-            <div class="w-32 text-gray-400 font-medium shrink-0">2024 - 2025</div>
-            <div>
-                <h3 class="text-xl font-bold italic">AI Engineering Intern</h3>
-                <div class="text-red-500 font-medium mb-4">Proact AI Consulting</div>
-                <p class="text-gray-600">Built Transformer-based network intrusion systems. Reduced false positives by 27% and optimized inference time for real-world deployment.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer class="py-24 border-t border-gray-100 bg-white">
+<footer class="py-32 border-t border-gray-100 bg-white">
   <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-5xl font-bold mb-12">Let's create the <span class="text-blue-600">next big thing.</span></h2>
-    <div class="flex justify-center gap-8 mb-16">
-        <a href="mailto:khedekartanmay2004@gmail.com" class="text-lg font-medium hover:text-blue-600">Email</a>
-        <a href="https://github.com/TanmayKhedekar" target="_blank" class="text-lg font-medium hover:text-blue-600">GitHub</a>
-        <a href="https://linkedin.com/in/tanmay-khedekar-b66b43226/" target="_blank" class="text-lg font-medium hover:text-blue-600">LinkedIn</a>
+    <div class="text-gray-400 font-bold uppercase tracking-[0.3em] text-[10px] mb-8">Reach Out</div>
+    <h2 class="text-6xl font-bold mb-12 italic">Let's solve the <span class="google-gradient-text underline">impossible.</span></h2>
+    <div class="flex justify-center flex-wrap gap-12 mb-20 text-lg font-medium">
+        <a href="mailto:khedekartanmay2004@gmail.com" class="hover:text-blue-600 transition underline underline-offset-8 decoration-gray-200">Email</a>
+        <a href="https://github.com/TanmayKhedekar" target="_blank" class="hover:text-blue-600 transition underline underline-offset-8 decoration-gray-200">GitHub</a>
+        <a href="https://linkedin.com/in/tanmay-khedekar-b66b43226/" target="_blank" class="hover:text-blue-600 transition underline underline-offset-8 decoration-gray-200">LinkedIn</a>
     </div>
-    <div class="pt-8 border-t border-gray-50 text-gray-400 text-sm">
-      Pune, Maharashtra • © 2026 Tanmay Khedekar • Optimized for Intelligence
+    <div class="pt-12 border-t border-gray-50 text-gray-400 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>Based in Pune, Maharashtra, India</div>
+      <div>© 2026 Tanmay Sandip Khedekar • Optimized for Intelligence</div>
+      <div class="flex gap-1">
+        <div class="h-2 w-2 rounded-full bg-[var(--g-blue)]"></div>
+        <div class="h-2 w-2 rounded-full bg-[var(--g-red)]"></div>
+        <div class="h-2 w-2 rounded-full bg-[var(--g-yellow)]"></div>
+        <div class="h-2 w-2 rounded-full bg-[var(--g-green)]"></div>
+      </div>
     </div>
   </div>
 </footer>
